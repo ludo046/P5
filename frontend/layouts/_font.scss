@@ -1,0 +1,11 @@
+.menu, h1, p, ul{
+    font-family: roboto, serif, sans-serif;
+}
+p, ul{
+    font-size: 0.8rem;
+    @media screen and (min-width : 1025px){
+        font-size: 1rem;
+    }
+}
+
+
