@@ -1,0 +1,16 @@
+
+.basket{
+    background-color: $primary-color;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    font-family: roboto, serif, sans-serif;
+    border: 3px solid $secondary-color;
+    &:hover{
+        transform: scale(1.1);
+    }
+    @media screen and (min-width : 1025px){
+        margin: 20px auto;
+    }
+}
