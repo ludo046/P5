@@ -1,14 +1,21 @@
-.all-article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.menu, h1, p, ul {
+  font-family: roboto, serif, sans-serif;
 }
 
+p, ul {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 1025px) {
+  p, ul {
+    font-size: 1rem;
+  }
+}
+
+.all-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 @media screen and (min-width: 1025px) {
   .all-article {
     width: 90%;
@@ -20,10 +27,8 @@
   width: 150px;
   height: 220px;
   margin: 1.5rem 0.9rem;
-  -webkit-box-shadow: 5px 35px 10px #f2e9f1;
-          box-shadow: 5px 35px 10px #f2e9f1;
+  box-shadow: 5px 35px 10px #f2e9f1;
 }
-
 @media screen and (min-width: 1025px) {
   .article {
     width: 250px;
@@ -42,31 +47,25 @@
     color: #a15c9f;
   }
 }
-
 .article .img-article {
   height: 150px;
   width: 150px;
 }
-
 .article .description-article {
   background-color: white;
   height: 100px;
   border-radius: 0 0 10px 10px;
   border-top: 1px solid #f2e9f1;
 }
-
 @media screen and (min-width: 1025px) {
   .article .description-article {
     margin-top: 100px;
-    -webkit-box-shadow: 5px 10px 10px #f2e9f1;
-            box-shadow: 5px 10px 10px #f2e9f1;
+    box-shadow: 5px 10px 10px #f2e9f1;
   }
 }
-
 .article .picture {
   border-radius: 10px 10px 0 0;
 }
-
 @media screen and (min-width: 1025px) {
   .article .picture {
     width: 250px;
@@ -77,7 +76,6 @@
   padding-top: 0.1rem;
   margin: 0.2rem 0 1rem 0;
 }
-
 .item p {
   text-align: center;
   margin: 0.5rem 0;
@@ -92,33 +90,28 @@
   width: 90%;
   margin: 0 auto;
 }
-
 .all-description h2 {
   font-family: roboto, serif, sans-serif;
   font-size: 18px;
   text-align: center;
-  margin: 100px auto;
+  margin: 20px auto;
   font-weight: 300;
 }
-
 @media screen and (min-width: 1025px) {
   .all-description h2 {
     margin: 90px 0 40px 0;
   }
 }
-
 .all-description .product-option {
   width: 31%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1025px) {
   .all-description .product-option {
     margin: 10px;
     height: 70px;
   }
 }
-
 .all-description .product-option #color {
   margin-top: 20px;
   font-size: 20px;
@@ -126,18 +119,15 @@
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
-
 .all-description .amount {
   width: 21%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1025px) {
   .all-description .amount {
     margin: 0 0 0 15px;
   }
 }
-
 .all-description .amount .input {
   width: 50px;
   margin: 10px auto;
@@ -146,12 +136,10 @@
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
-
 .all-description .panier {
   width: 65%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1025px) {
   .all-description .panier {
     width: 200px;
@@ -163,7 +151,6 @@
   display: block;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1025px) {
   .picture .img {
     width: 400px;
@@ -172,8 +159,6 @@
 
 @media screen and (min-width: 1025px) {
   .product {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 70%;
     margin: 0 auto;
@@ -182,21 +167,183 @@
 
 @media screen and (min-width: 1025px) {
   .option {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     margin: 0 auto;
   }
 }
 
-.basket {
+.order ul {
+  padding: 0;
+  margin: 0 auto;
+  font-family: roboto, serif, sans-serif;
+}
+.order ul li {
+  width: 98%;
+  list-style: none;
+  display: flex;
+  border: 2px solid #a15c9f;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1025px) {
+  .order ul li {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.action {
+  margin-left: 30px;
+}
+@media screen and (min-width: 1025px) {
+  .action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.action .number {
+  display: flex;
+  align-items: center;
+}
+.action .number input {
+  width: 20px;
+  height: 15px;
+  margin: 0 50px 0 10px;
+  border: 3px solid #a15c9f;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1025px) {
+  .action .number input {
+    height: 30px;
+    width: 50px;
+  }
+}
+.action p {
+  margin: 7px;
+}
+
+.total {
+  border: 2px solid #a15c9f;
+  border-radius: 5px;
+  width: 130px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 57%;
+  font-family: roboto, serif, sans-serif;
+}
+@media screen and (min-width: 1025px) {
+  .total {
+    margin-left: 82%;
+  }
+}
+.total h2 {
+  padding-left: 15px;
+  font-size: 20px;
+}
+.total p {
+  padding-left: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: roboto, serif, sans-serif;
+}
+.form h3 {
+  font-size: 25px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 1025px) {
+  .form h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+.form form {
+  border: 2px solid #a15c9f;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+@media screen and (min-width: 1025px) {
+  .form form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.form form .exp {
+  margin: 15px;
+  border: 2px solid #a15c9f;
+  border-radius: 5px;
+  font-size: 15px;
+}
+@media screen and (min-width: 1025px) {
+  .form form .exp {
+    font-size: 18px;
+  }
+}
+.form .input {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .form .input {
+    padding: 0 50px;
+  }
+}
+
+.sex {
+  display: flex;
+  margin: 10px 0 20px 10px;
+}
+@media screen and (min-width: 1025px) {
+  .sex {
+    padding: 0 50px;
+  }
+}
+.sex #women {
+  margin-left: 20px;
+}
+
+.ordered {
+  margin: 20px auto;
+  width: 61%;
+}
+@media screen and (min-width: 1025px) {
+  .ordered {
+    width: 20%;
+  }
+}
+
+.confirmation {
+  font-family: roboto;
+  text-align: center;
+}
+.confirmation h2 {
+  margin: 100px 0;
+}
+.confirmation h3 {
+  margin-bottom: 100px;
+}
+.confirmation .confirm {
+  border: 3px solid #a15c9f;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1025px) {
+  .confirmation .confirm {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.btn {
   background-color: #f2e9f1;
   border-radius: 20px;
   font-size: 20px;
@@ -205,14 +352,11 @@
   font-family: roboto, serif, sans-serif;
   border: 3px solid #a15c9f;
 }
-
-.basket:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.btn:hover {
+  transform: scale(1.1);
 }
-
 @media screen and (min-width: 1025px) {
-  .basket {
+  .btn {
     margin: 20px auto;
   }
 }
@@ -233,21 +377,24 @@
   color: transparent;
 }
 
+.fa-trash-alt {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #a15c9f;
+}
+
 .top {
   background-color: #f2e9f1;
 }
-
 .top .logo {
   width: 100%;
 }
-
 @media screen and (min-width: 400px) {
   .top .logo {
     width: 400px;
     margin-left: 23%;
   }
 }
-
 @media screen and (min-width: 1025px) {
   .top .logo {
     width: 400px;
@@ -256,24 +403,17 @@
 }
 
 #nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #nav .menu {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #nav .menu p {
   margin: 1rem auto;
   font-size: 20px;
-  font-family: roboto,serif,sans-serif;
+  font-family: roboto, serif, sans-serif;
 }
-
 #nav :hover {
   background-color: #f2e9f1;
 }
@@ -284,7 +424,6 @@ h1 {
   padding: 0.5rem 1rem;
   font-family: roboto, serif, sans-serif;
 }
-
 @media screen and (min-width: 1025px) {
   h1 {
     font-size: 30px;
@@ -298,33 +437,30 @@ footer {
   margin-top: 2rem;
   background-color: #f2e9f1;
 }
-
 @media screen and (min-width: 1025px) {
   footer {
     margin-top: 4rem;
     height: 150px;
   }
 }
-
 footer ul {
   list-style: none;
   padding: 1rem;
   font-size: 18px;
-  font-family: roboto, serif,sans-serif;
+  font-family: roboto, serif, sans-serif;
   font-weight: 300;
 }
-
 @media screen and (min-width: 400px) {
   footer ul {
     padding: 1rem 15rem;
     text-align: center;
   }
 }
-
 @media screen and (min-width: 1025px) {
   footer ul {
     padding: 3rem 3rem;
     text-align: center;
   }
 }
+
 /*# sourceMappingURL=styles.css.map */

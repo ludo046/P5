@@ -71,7 +71,7 @@
         font-family: roboto, serif, sans-serif;
         font-size: 18px;
         text-align: center;
-        margin: 100px auto;
+        margin: 20px auto;
         font-weight: 300;
         @media screen and (min-width : 1025px){
             margin: 90px 0 40px 0;
@@ -115,7 +115,6 @@
 
         }
     }
- 
 }
 .picture{
         .img{
@@ -141,6 +140,148 @@
         justify-content: center;
         width: 50%;
         margin: 0 auto;
+    }
+}
+.order{
+    ul{
+
+        padding: 0;
+        margin: 0 auto;
+        font-family: roboto,serif,sans-serif;
+        li{
+            width: 98%;
+            list-style: none;
+            display: flex;
+            border: 2px solid $secondary-color;
+            border-radius: 5px;
+            @media screen and (min-width : 1025px){
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.action{
+    margin-left: 30px;
+    @media screen and (min-width : 1025px){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .number{
+        display: flex;
+        align-items: center;    
+        input{
+            width: 20px;
+            height: 15px;
+            margin: 0 50px 0 10px;
+            border: 3px solid $secondary-color;
+            border-radius: 10px;
+            @media screen and (min-width : 1025px){
+                height: 30px;
+                width: 50px;
+            }
+        }
+    }
+    p{
+        margin: 7px;
+    }
+}
+.total{
+    border: 2px solid $secondary-color;
+    border-radius: 5px;
+    width: 130px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 57%;
+    font-family: roboto,serif,sans-serif;
+    @media screen and (min-width : 1025px){
+        margin-left: 82%;
+    }
+    h2{
+        padding-left: 15px;
+        font-size: 20px;
+    }
+    p{
+        padding-left: 20px;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    font-family: roboto, serif, sans-serif;
+    h3{
+        font-size: 25px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0.5rem 1rem;
+        @media screen and (min-width : 1025px){
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+    form{
+        border: 2px solid $secondary-color;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        @media screen and (min-width : 1025px){
+            width: 70%;
+            margin: 0 auto;
+        }
+        .exp{
+            margin: 15px;
+            border: 2px solid $secondary-color;
+            border-radius: 5px;
+            font-size: 15px;
+            @media screen and (min-width : 1025px){
+                font-size: 18px;
+            }
+        }
+    }
+    .input{
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width : 1025px){
+            padding: 0 50px;
+        }
+    }
+}
+.sex{
+    display: flex;
+    margin: 10px 0 20px 10px;
+    @media screen and (min-width : 1025px){
+        padding: 0 50px;
+    }
+    #women{
+        margin-left: 20px;
+    }
+}
+.ordered{
+    margin: 20px auto;
+    width: 61%;
+    @media screen and (min-width : 1025px){
+        width: 20%;
+    }
+}
+.confirmation{
+    font-family: roboto;
+    text-align: center;
+    h2{
+        margin: 100px 0;
+    }
+    h3{
+        margin-bottom: 100px;
+    }
+    .confirm{
+        border: 3px solid $secondary-color;
+        border-radius: 10px;
+        @media screen and (min-width : 1025px){
+            width: 50%;
+            margin:0 auto;
+        }
     }
 }
 
