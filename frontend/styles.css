@@ -11,63 +11,67 @@ p, ul {
   }
 }
 
-.all-article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.all-teddies {
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 @media screen and (min-width: 1025px) {
-  .all-article {
+  .all-teddies {
+    display: flex;
+    flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
+    justify-content: space-around;
   }
 }
-
-.article {
-  width: 150px;
-  height: 220px;
-  margin: 1.5rem 0.9rem;
-  box-shadow: 5px 35px 10px #f2e9f1;
+.all-teddies img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #a15c9f;
+}
+.all-teddies li {
+  width: 250px;
+  border: 1px solid #a15c9f;
+  border-radius: 10px;
+  margin: 30px auto;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 1025px) {
-  .article {
-    width: 250px;
-    margin: 3rem 3rem 7rem 3rem;
-  }
-  .article :hover .hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 250px;
-    width: 250px;
-    position: absolute;
-  }
-  .article :hover .hover .fa-plus-circle {
-    position: absolute;
-    top: 6rem;
-    right: 5rem;
-    color: #a15c9f;
+  .all-teddies li {
+    margin: 20px;
   }
 }
-.article .img-article {
+.all-teddies li a {
+  text-decoration: none;
+  color: black;
+}
+
+.img-article {
   height: 150px;
   width: 150px;
 }
-.article .description-article {
+
+.description-article {
   background-color: white;
   height: 100px;
   border-radius: 0 0 10px 10px;
   border-top: 1px solid #f2e9f1;
 }
 @media screen and (min-width: 1025px) {
-  .article .description-article {
+  .description-article {
     margin-top: 100px;
     box-shadow: 5px 10px 10px #f2e9f1;
   }
 }
-.article .picture {
+
+.picture {
   border-radius: 10px 10px 0 0;
 }
 @media screen and (min-width: 1025px) {
-  .article .picture {
+  .picture {
     width: 250px;
   }
 }
@@ -192,6 +196,15 @@ p, ul {
     width: 80%;
     margin: 0 auto;
   }
+}
+
+.info {
+  display: flex;
+  margin: 0 10px;
+}
+.info p {
+  font-size: 20px;
+  margin: 20px 30px;
 }
 
 .action {
@@ -341,6 +354,40 @@ p, ul {
     width: 50%;
     margin: 0 auto;
   }
+}
+
+label {
+  position: absolute;
+  color: #333;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-in;
+}
+
+.anim {
+  position: relative;
+}
+.anim label {
+  position: absolute;
+  color: #333;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 25px;
+  transition: all 0.3s in;
+}
+
+.anim:focus-within label,
+.anim.active-input label {
+  top: -2px;
+  padding-left: 25px;
+}
+
+.sex {
+  position: relative;
+}
+.sex #women {
+  margin-left: 100px;
 }
 
 .btn {

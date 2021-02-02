@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
         <link href="./styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="./photos/logo-ohmyfood.png" />
     </head>
     <body>
         <header>
@@ -17,7 +16,7 @@
             <nav>
                 <div id="nav">
                 <div class="menu">
-                    <p><i class="fas fa-bars"></i>Produits</p>
+                    <a href="produit.html"><p><i class="fas fa-bars"></i>Produits</p></a>
                 </div>
                 <div class="menu">
                     <p><i class="fas fa-shopping-basket"></i>Panier</p>
@@ -27,73 +26,11 @@
         </header>
         <main>
             <section class="item">
-                <h1>Tout nos ours en peluche</h1>
+                <h1>Tous nos ours en peluche</h1>
                 <div class="all-article">
-                    <div class="article">
-                        <div class="img-article">
-                            <div class="hover">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            <img src="../backend/images/teddy_1 copie.jpeg" alt="ours en peluche numero 1" class="picture">
-                        </div>
-                        <div class="description-article">
-                            <p>Ours en peluche<br>fait main n°1</p>
-                            <p><i class="fas fa-circle"></i>en stock</p>
-                            <p>25€</p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <div class="img-article">                            
-                            <div class="hover">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            <img src="../backend/images/teddy_2.jpeg" alt="ours en peluche numero 2" class="picture">
-                        </div>
-                        <div class="description-article">
-                            <p>Ours en peluche<br>fait main n°2</p>
-                            <p><i class="fas fa-circle"></i>en stock</p>
-                            <p>32€</p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <div class="img-article">
-                            <div class="hover">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            <img src="../backend/images/teddy_3.jpeg" alt="ours en peluche numero 3" class="picture">
-                        </div>
-                        <div class="description-article">
-                            <p>Ours en peluche<br>fait main n°3</p>
-                            <p><i class="fas fa-circle"></i>en stock</p>
-                            <p>43€</p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <div class="img-article">
-                            <div class="hover">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            <img src="../backend/images/teddy_4.jpeg" alt="ours en peluche numero 4" class="picture">
-                        </div>
-                        <div class="description-article">
-                            <p>Ours en peluche<br>fait main n°4</p>
-                            <p><i class="fas fa-circle"></i>en stock</p>
-                            <p>27€</p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <div class="img-article">
-                            <div class="hover">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            <img src="../backend/images/teddy_5.jpeg" alt="ours en peluche numero 5" class="picture">
-                        </div>
-                        <div class="description-article">
-                            <p>Ours en peluche<br>fait main n°5</p>
-                            <p><i class="fas fa-circle"></i>en stock</p>
-                            <p>30€</p>
-                        </div>
-                    </div>
+                    <ul class="all-teddies">
+
+                    </ul>
                 </div>
             </section>
         </main>
@@ -104,5 +41,6 @@
                 <li>Contact</li>
             </ul>
         </footer>
+        <script src="./index.js"></script>
     </body>
 </html>

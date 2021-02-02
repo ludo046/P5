@@ -1,35 +1,37 @@
-.all-article{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.all-teddies{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+
     @media screen and (min-width : 1025px){
+        display: flex;
+        flex-wrap: wrap;
         width: 90%;
         margin: 0 auto;
+        justify-content: space-around;
     }
-}
-.article{
-    width: 150px;
-    height: 220px;
-    margin: 1.5rem 0.9rem;
-    box-shadow: 5px 35px 10px $primary-color;
-    @media screen and (min-width : 1025px){
+    img{
+        height: 250px;
         width: 250px;
-        margin: 3rem 3rem 7rem 3rem;
-        :hover{
-            .hover{
-                background-color: rgba(255, 255, 255, 0.5) ;
-                height: 250px;
-                width: 250px;
-                position: absolute;
-                .fa-plus-circle{
-                    position: absolute;
-                    top: 6rem;
-                    right: 5rem;
-                    color: $secondary-color;
-                }
-            }
+        object-fit: cover;
+        border-radius: 10px 10px 0 0 ;
+        border-bottom: 1px solid $secondary-color;
+    }
+    li{
+        width: 250px;
+        border: 1px solid $secondary-color;
+        border-radius: 10px;
+        margin: 30px auto;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+        @media screen and (min-width : 1025px){
+            margin:20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
         }
     }
+}
     .img-article{
         height: 150px;
         width: 150px;
@@ -50,8 +52,6 @@
             width: 250px;
         }
     }
-
-}
 .item{
     padding-top: 0.1rem;
     margin: 0.2rem 0 1rem 0 ;
@@ -159,6 +159,14 @@
                 margin: 0 auto;
             }
         }
+    }
+}
+.info{
+    display: flex;
+    margin: 0 10px;
+    p{
+        font-size: 20px;
+        margin: 20px 30px;
     }
 }
 .action{
@@ -284,4 +292,39 @@
         }
     }
 }
+label{
+        position: absolute;
+        color: #333;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 8px;
+        transition: all 0.3s ease-in;
+}
+.anim{
+    position: relative;
+    label{
+    position: absolute;
+    color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 25px;
+    transition: all 0.3s in;
+    }
+}
+.anim:focus-within label,
+.anim.active-input label{
+    top: -2px;
+    padding-left: 25px;
+}
+.sex{
+    position: relative;
+    #women{
+          margin-left: 100px; 
+    }
+}
+
+
+
+
+
 
