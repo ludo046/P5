@@ -1,9 +1,12 @@
+const teddiesList = document.querySelector('.all-teddies')
+
 function getTeddies(){
     //appel de l'api
     fetch("http://localhost:3000/api/teddies")
     .then(response =>{
         response.json()
         .then((allTeddies) => {
+            console.log(allTeddies);
             //creation des cartes produit
            for(let i = 0; i < allTeddies.length; i++){
             const card = document.createElement('li')
@@ -23,7 +26,6 @@ function getTeddies(){
             card.appendChild(link)
             teddiesList.appendChild(card)
            }
-           
         }) 
     })
 }

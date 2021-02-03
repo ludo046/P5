@@ -5,6 +5,7 @@
 p, ul {
   font-size: 0.8rem;
 }
+
 @media screen and (min-width: 1025px) {
   p, ul {
     font-size: 1rem;
@@ -16,34 +17,45 @@ p, ul {
   text-align: center;
   padding: 0;
 }
+
 @media screen and (min-width: 1025px) {
   .all-teddies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
+
 .all-teddies img {
   height: 250px;
   width: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid #a15c9f;
 }
+
 .all-teddies li {
   width: 250px;
   border: 1px solid #a15c9f;
   border-radius: 10px;
   margin: 30px auto;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
 }
+
 @media screen and (min-width: 1025px) {
   .all-teddies li {
     margin: 20px;
   }
 }
+
 .all-teddies li a {
   text-decoration: none;
   color: black;
@@ -60,16 +72,19 @@ p, ul {
   border-radius: 0 0 10px 10px;
   border-top: 1px solid #f2e9f1;
 }
+
 @media screen and (min-width: 1025px) {
   .description-article {
     margin-top: 100px;
-    box-shadow: 5px 10px 10px #f2e9f1;
+    -webkit-box-shadow: 5px 10px 10px #f2e9f1;
+            box-shadow: 5px 10px 10px #f2e9f1;
   }
 }
 
 .picture {
   border-radius: 10px 10px 0 0;
 }
+
 @media screen and (min-width: 1025px) {
   .picture {
     width: 250px;
@@ -80,6 +95,7 @@ p, ul {
   padding-top: 0.1rem;
   margin: 0.2rem 0 1rem 0;
 }
+
 .item p {
   text-align: center;
   margin: 0.5rem 0;
@@ -94,6 +110,7 @@ p, ul {
   width: 90%;
   margin: 0 auto;
 }
+
 .all-description h2 {
   font-family: roboto, serif, sans-serif;
   font-size: 18px;
@@ -101,21 +118,25 @@ p, ul {
   margin: 20px auto;
   font-weight: 300;
 }
+
 @media screen and (min-width: 1025px) {
   .all-description h2 {
     margin: 90px 0 40px 0;
   }
 }
+
 .all-description .product-option {
   width: 31%;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 1025px) {
   .all-description .product-option {
     margin: 10px;
     height: 70px;
   }
 }
+
 .all-description .product-option #color {
   margin-top: 20px;
   font-size: 20px;
@@ -123,15 +144,18 @@ p, ul {
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
+
 .all-description .amount {
   width: 21%;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 1025px) {
   .all-description .amount {
     margin: 0 0 0 15px;
   }
 }
+
 .all-description .amount .input {
   width: 50px;
   margin: 10px auto;
@@ -140,10 +164,12 @@ p, ul {
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
+
 .all-description .panier {
   width: 65%;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 1025px) {
   .all-description .panier {
     width: 200px;
@@ -155,6 +181,7 @@ p, ul {
   display: block;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 1025px) {
   .picture .img {
     width: 400px;
@@ -163,6 +190,8 @@ p, ul {
 
 @media screen and (min-width: 1025px) {
   .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 70%;
     margin: 0 auto;
@@ -171,9 +200,15 @@ p, ul {
 
 @media screen and (min-width: 1025px) {
   .option {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 50%;
     margin: 0 auto;
   }
@@ -182,15 +217,19 @@ p, ul {
 .order ul {
   padding: 0;
   margin: 0 auto;
-  font-family: roboto, serif, sans-serif;
+  font-family: roboto,serif,sans-serif;
 }
+
 .order ul li {
   width: 98%;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 2px solid #a15c9f;
   border-radius: 5px;
 }
+
 @media screen and (min-width: 1025px) {
   .order ul li {
     width: 80%;
@@ -199,9 +238,12 @@ p, ul {
 }
 
 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 10px;
 }
+
 .info p {
   font-size: 20px;
   margin: 20px 30px;
@@ -210,18 +252,31 @@ p, ul {
 .action {
   margin-left: 30px;
 }
+
 @media screen and (min-width: 1025px) {
   .action {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
   }
 }
+
 .action .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .action .number input {
   width: 20px;
   height: 15px;
@@ -229,12 +284,14 @@ p, ul {
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
+
 @media screen and (min-width: 1025px) {
   .action .number input {
     height: 30px;
     width: 50px;
   }
 }
+
 .action p {
   margin: 7px;
 }
@@ -244,68 +301,93 @@ p, ul {
   border-radius: 5px;
   width: 130px;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 57%;
-  font-family: roboto, serif, sans-serif;
+  font-family: roboto,serif,sans-serif;
 }
+
 @media screen and (min-width: 1025px) {
   .total {
     margin-left: 82%;
   }
 }
+
 .total h2 {
   padding-left: 15px;
   font-size: 20px;
 }
+
 .total p {
   padding-left: 20px;
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: roboto, serif, sans-serif;
 }
+
 .form h3 {
   font-size: 25px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 0.5rem 1rem;
 }
+
 @media screen and (min-width: 1025px) {
   .form h3 {
     text-align: center;
     font-size: 30px;
   }
 }
+
 .form form {
   border: 2px solid #a15c9f;
   border-radius: 5px;
   padding: 10px;
   font-size: 18px;
 }
+
 @media screen and (min-width: 1025px) {
   .form form {
     width: 70%;
     margin: 0 auto;
   }
 }
+
 .form form .exp {
   margin: 15px;
   border: 2px solid #a15c9f;
   border-radius: 5px;
   font-size: 15px;
 }
+
 @media screen and (min-width: 1025px) {
   .form form .exp {
     font-size: 18px;
   }
 }
+
 .form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media screen and (min-width: 1025px) {
   .form .input {
     padding: 0 50px;
@@ -313,14 +395,18 @@ p, ul {
 }
 
 .sex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px 0 20px 10px;
 }
+
 @media screen and (min-width: 1025px) {
   .sex {
     padding: 0 50px;
   }
 }
+
 .sex #women {
   margin-left: 20px;
 }
@@ -329,6 +415,7 @@ p, ul {
   margin: 20px auto;
   width: 61%;
 }
+
 @media screen and (min-width: 1025px) {
   .ordered {
     width: 20%;
@@ -339,16 +426,20 @@ p, ul {
   font-family: roboto;
   text-align: center;
 }
+
 .confirmation h2 {
   margin: 100px 0;
 }
+
 .confirmation h3 {
   margin-bottom: 100px;
 }
+
 .confirmation .confirm {
   border: 3px solid #a15c9f;
   border-radius: 10px;
 }
+
 @media screen and (min-width: 1025px) {
   .confirmation .confirm {
     width: 50%;
@@ -360,20 +451,25 @@ label {
   position: absolute;
   color: #333;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   padding-left: 8px;
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 .anim {
   position: relative;
 }
+
 .anim label {
   position: absolute;
   color: #333;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   padding-left: 25px;
+  -webkit-transition: all 0.3s in;
   transition: all 0.3s in;
 }
 
@@ -386,6 +482,7 @@ label {
 .sex {
   position: relative;
 }
+
 .sex #women {
   margin-left: 100px;
 }
@@ -399,9 +496,12 @@ label {
   font-family: roboto, serif, sans-serif;
   border: 3px solid #a15c9f;
 }
+
 .btn:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 @media screen and (min-width: 1025px) {
   .btn {
     margin: 20px auto;
@@ -433,15 +533,18 @@ label {
 .top {
   background-color: #f2e9f1;
 }
+
 .top .logo {
   width: 100%;
 }
+
 @media screen and (min-width: 400px) {
   .top .logo {
     width: 400px;
     margin-left: 23%;
   }
 }
+
 @media screen and (min-width: 1025px) {
   .top .logo {
     width: 400px;
@@ -450,17 +553,24 @@ label {
 }
 
 #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #nav .menu {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #nav .menu p {
   margin: 1rem auto;
   font-size: 20px;
-  font-family: roboto, serif, sans-serif;
+  font-family: roboto,serif,sans-serif;
 }
+
 #nav :hover {
   background-color: #f2e9f1;
 }
@@ -471,6 +581,7 @@ h1 {
   padding: 0.5rem 1rem;
   font-family: roboto, serif, sans-serif;
 }
+
 @media screen and (min-width: 1025px) {
   h1 {
     font-size: 30px;
@@ -484,30 +595,33 @@ footer {
   margin-top: 2rem;
   background-color: #f2e9f1;
 }
+
 @media screen and (min-width: 1025px) {
   footer {
     margin-top: 4rem;
     height: 150px;
   }
 }
+
 footer ul {
   list-style: none;
   padding: 1rem;
   font-size: 18px;
-  font-family: roboto, serif, sans-serif;
+  font-family: roboto, serif,sans-serif;
   font-weight: 300;
 }
+
 @media screen and (min-width: 400px) {
   footer ul {
     padding: 1rem 15rem;
     text-align: center;
   }
 }
+
 @media screen and (min-width: 1025px) {
   footer ul {
     padding: 3rem 3rem;
     text-align: center;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
