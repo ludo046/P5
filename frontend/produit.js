@@ -1,8 +1,9 @@
+//recuperatio de l'id du produit 
 let param = new URLSearchParams(document.location.search);
 let id = param.get('id')
 console.log(id);
 
-function getOneTeddie(){
+function getOneTeddie(){    //fonction pour afficher le produit selectionner 
     fetch(`http://localhost:3000/api/teddies/${id}`)
     .then((response) => response.json())
     .then(oneTeddie  => {
@@ -18,12 +19,29 @@ function getOneTeddie(){
         price.innerText = 'prix :' + oneTeddie.price/100+`.00€`
         //choix couleur 
         const select = document.getElementById('color')
+        //boucle pour recuperer les options de chaque produit
         for (let i in oneTeddie.colors){
             select.innerHTML += `<option value='${oneTeddie.colors[i]}' selected='selected'>${oneTeddie.colors[i]}</option>`
         }
-        const quantity = document.querySelector('.input')
-        localStorage.setItem(id, oneTeddie._id)
-        localStorage.setItem(select, colors)
+        //recuperation de l'option 
+       let optionValue  = document.getElementById("color").value;
+       console.log(optionValue);
+        //recuperation de la quantité 
+       let quantity = document.querySelector('.input').value;
+       console.log(quantity);
     })
 }
-getOneTeddie()
+getOneTeddie() //appel de la fonction 
+
+
+
+function addToCard(){
+    const addcard = document.querySelector('.btn')
+        addcard.addEventListener('click', function(){
+            localStorage.setItem(name, oneTeddie.name);
+            localStorage.setItem(select,optionValue);
+            localStorage.setItem(quantity, quantity);
+            localStorage.setItem(price, oneTeddie.price);
+       })
+}
+addToCard()
