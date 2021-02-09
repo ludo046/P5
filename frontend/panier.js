@@ -1,0 +1,80 @@
+let teddie = JSON.parse(localStorage.getItem('teddie'))
+
+function displayBasket(){
+    basketProduct = JSON.parse(localStorage.getItem('teddie'))
+    console.log(basketProduct);
+
+    const basket = document.querySelector('.basket')
+    if (basketProduct !== null){     // si il ya des articles dans le panier affiche les 
+        basketProduct.forEach(function(items){   // boucle pour cree chaque element du panier tant quil ya des articles a afficher
+            const list = document.createElement('li')
+            list.classList.add('list-basket')
+            const productImage = document.createElement('img')
+            productImage.src = items.image
+            productImage.classList.add('img-article')
+            const info = document.createElement('div')
+            info.classList.add('info')
+            let productName = document.createElement('h2')
+            productName.innerText = items.name
+            let price = document.createElement('p')
+            price.innerText = items.price/100+'.00 €'
+            let colour = document.createElement('p')
+            colour.innerText = items.select
+            let quantity = document.createElement('p')
+            quantity.innerText = items.quantity
+            const stock = document.createElement('p')
+            stock.innerText = 'En stock'
+            const trash = document.createElement('button')
+            trash.classList.add('trash')
+            trash.innerText = 'supprimer produit'
+            trash.onclick = function(){deleteProduct(items.id)}
+
+            basket.appendChild(list)
+            list.appendChild(productImage)
+            list.appendChild(info)
+            info.appendChild(productName)
+            info.appendChild(price)
+            info.appendChild(colour)
+            info.appendChild(quantity)
+            info.appendChild(stock)
+            info.appendChild(trash)
+            
+            //trash.addEventListener('click', deleteProduct(items.id))
+
+        })
+    } else {    // ci il n'y a pas d'article affiche le message 'panier vide'
+        const infoAnyProduct = document.createElement('li')
+        const anyProduct = document.createElement('h2')
+        anyProduct.innerText = 'Votre panier est vide';
+
+        const form = document.querySelector('.form')
+        form.style.display = 'none'  // enleve le formulaire de commande en cas de panier vide 
+
+        basket.appendChild(infoAnyProduct) 
+        infoAnyProduct.appendChild(anyProduct)
+    }
+}
+displayBasket()
+
+function deleteProduct(id){
+    let deleteItem = JSON.parse(localStorage.getItem('teddie'))
+    const update = deleteItem.filter((items) => items.id !== id)
+    localStorage.setItem('teddie',JSON.stringify(update))
+    if (update == 0){
+        localStorage.clear()
+    }
+    document.location.href = 'panier.html'
+}
+
+function price(){   // fonction de calcul du prix total
+    let totalPrice = 0 
+    JSON.parse(localStorage.getItem('teddie')).forEach((items)=>{   //boucle pour calculer le prix total en foction du nombre d'article et de la quantité de chacun 
+        totalPrice += items.price*items.quantity/100
+    })
+    const total = document.querySelector('.total')   // affichage du prix total 
+    orderPrice = document.createElement('p')
+    orderPrice.innerText = totalPrice +'. 00 €'
+
+    total.appendChild(orderPrice)
+}
+price()

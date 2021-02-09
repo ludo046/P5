@@ -41,7 +41,7 @@ function getOneTeddie() {    //fonction pour afficher le produit selectionner
 
 function getValues() {
     //recuperation de l'option 
-    let optionValue = document.getElementById("color").value;
+    let optionValue = document.getElementById('color').value;
     console.log(optionValue);
     //recuperation de la quantité 
     let quantity = document.querySelector('.input').value;
@@ -69,19 +69,21 @@ addCard.addEventListener('click', async function () {
         select : customerChoice.optionValue,
         quantity : customerChoice.quantity,
         price : oneTeddie.price,
+        image : oneTeddie.imageUrl,
+        id : oneTeddie._id
     }
     console.log(completeTeddies);
 
     let card = JSON.parse(localStorage.getItem('teddie'));
 
-    if(!card){    //ajoute au tableau ci pas de panier 
+    if(!card) {    //ajoute au tableau ci pas de panier 
         let card = []
         card.push(completeTeddies)
         localStorage.setItem('teddie',JSON.stringify(card))
-    }else if (!card.some(teddie => teddie == teddie.id === completeTeddies.id)){    //si panier verifier que je n'ai pas le meme produit a l'interieur avant d'ajouter le nouveau 
+    } else if (!card.some(teddie => teddie == teddie.id === completeTeddies.id)){    //si panier verifier que je n'ai pas le meme produit a l'interieur avant d'ajouter le nouveau 
         card.push(completeTeddies)
         localStorage.setItem('teddie',JSON.stringify(card))
-    }else{      //ci ej l'ai deja je l'enleve pour le remplacer 
+    } else {      //ci je l'ai deja je l'enleve pour le remplacer 
         const newCard = card.filter(teddie => teddie == teddie.id !== completeTeddies.id)
         newCard.push(completeTeddies)
         localStorage.setItem('teddie', JSON.stringify(newCard))
