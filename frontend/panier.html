@@ -38,50 +38,32 @@
             <section class="form">
                 <h3>Expédition</h3>
                 <form>
-                    <div class="sex">
-                        <div>
-                            <input type="radio" id="man">
-                            <label for="man">Monsieur</label> 
-                        </div>
-                        <div>
-                            <input type="radio" id="women">
-                            <label for="woman">Madame</label>
-                        </div>
-                    </div> 
                     <div class="input">
                         <div>
                             <div class="anim">
-                                <label for="name">Nom</label>
-                                <input type="text" id="mame" class="exp">
+                                <label for="name">Nom ----------</label>
+                                <input type="text" id="name" class="exp" placeholder="ex : Dupont" required>
                             </div>
                             <div class="anim">
-                                <label for="first-name">Prénom</label>
-                                <input type="text" id="first-name" class="exp">  
+                                <label for="first-name">Prénom -----</label>
+                                <input type="text" id="first-name" class="exp" placeholder="ex : Margueritte" required>  
                             </div>                                               
                         </div>
                         <div class="anim">
-                            <label for="tel">Téléphone</label>
-                            <input type="tel" class="exp" id="tel">
+                            <label for="mail">Email ---------</label>
+                            <input type="email" id="mail" class="exp" placeholder="ex : dupond.m@gmail.com" required>
                         </div>
                         <div class="anim">
-                            <label for="mail">Email</label>
-                            <input type="email" id="mail" class="exp">
+                            <label for="address">Adresse -----</label>
+                            <input type="text" id="address" class="exp" placeholder="ex : 8 place du four" required>
                         </div>
                         <div class="anim">
-                            <label for="adress">Adresse</label>
-                            <input type="text" id="adress" class="exp">
-                        </div>
-                        <div class="anim">
-                            <label for="key">Code postal</label>
-                            <input type="text" id="key" class="exp">
-                        </div>
-                        <div class="anim">
-                            <label for="ville">Ville</label>
-                            <input type="text" id="city" class="exp">
+                            <label for="ville">Ville ------------</label>
+                            <input type="text" id="city" class="exp" placeholder="ex : caveirac" required>
                         </div>
                     </div>
                     <div class="ordered">
-                        <button class="btn">Commander</button>
+                        <button class="btn" type="submit">Commander</button>
                     </div>   
                 </form>
             </section>

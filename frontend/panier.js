@@ -1,8 +1,10 @@
 let teddie = JSON.parse(localStorage.getItem('teddie'))
+let sex = document.querySelectorAll(".genre")
+const cmdBtn = document.querySelector('.btn')
 
 function displayBasket(){
     basketProduct = JSON.parse(localStorage.getItem('teddie'))
-    console.log(basketProduct);
+    //console.log(basketProduct);
 
     const basket = document.querySelector('.basket')
     if (basketProduct !== null){     // si il ya des articles dans le panier affiche les 
@@ -78,3 +80,56 @@ function price(){   // fonction de calcul du prix total
     total.appendChild(orderPrice)
 }
 price()
+
+// ============================ FORMULAIRE =================================
+const lastName = document.getElementById('name')
+const firstName = document.getElementById('first-name')
+const mail = document.getElementById('mail')
+const address = document.getElementById('address')
+const city = document.getElementById('city')
+
+
+cmdBtn.addEventListener('click',(e) => {
+    e.preventDefault()
+    let contact = {
+        lastName : lastName.value,
+        firstName : firstName.value,
+        email : mail.value,
+        address : address.value,
+        city : city.value
+    }
+    let products = [];
+
+        teddie.forEach(p => {
+            products.push(p.id)
+        })
+    
+    let commandeContact = JSON.stringify({
+        contact, products
+        
+    })
+    console.log(commandeContact);
+    fetch('http://localhost:3000/api/teddies/order',{
+        method: 'POST',
+        body: commandeContact,
+        headers:{
+            'Content-Type':'application/json',
+        },
+        
+    }).then(response => {
+        return response.json()
+    }).then ((r) => {
+    const orderId = r.orderId;
+    if (orderId == undefined) {
+        alert('ta fait une connerie')
+    } else {
+        window.location.href = `confirmation.html?commandId=${orderId}`
+        localStorage.removeItem('teddie')
+    }
+    })
+    .catch((error) => {
+        alert(error)
+    })
+})
+
+

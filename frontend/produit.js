@@ -47,7 +47,7 @@ function getValues() {
     let quantity = document.querySelector('.input').value;
     console.log(quantity);
 
-    let customerChoice = { // on créé un objet avec les valuers récupérées
+    let customerChoice = { // on créé ue variable avec les valuers récupérées
         optionValue: optionValue,
         quantity: quantity
     };

@@ -358,30 +358,11 @@ p, ul {
 }
 
 label {
-  position: absolute;
   color: #333;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 8px;
-  transition: all 0.3s ease-in;
 }
 
-.anim {
-  position: relative;
-}
-.anim label {
-  position: absolute;
+label {
   color: #333;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 25px;
-  transition: all 0.3s in;
-}
-
-.anim:focus-within label,
-.anim.active-input label {
-  top: -2px;
-  padding-left: 25px;
 }
 
 .sex {
@@ -444,6 +425,14 @@ label {
   color: #a15c9f;
 }
 
+@keyframes slide-up {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -2px;
+  }
+}
 .top {
   background-color: #f2e9f1;
 }
