@@ -1,4 +1,5 @@
 const teddiesList = document.querySelector('.all-teddies')
+itemNumber = JSON.parse(localStorage.getItem('teddie'))
 
 function getTeddies(){
     //appel de l'api
@@ -31,3 +32,5 @@ function getTeddies(){
 }
 getTeddies();
 
+numberItem = document.querySelector('.item-number')
+numberItem.innerHTML = itemNumber.length

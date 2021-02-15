@@ -24,18 +24,43 @@
 #nav{
     display: flex;
     .menu{
-        width: 50%;
-        display: flex;
+            width: 50%;
+            display: flex;
+            position: relative;
         p{
             margin: 1rem auto;
             font-size: 20px;
             font-family: roboto,serif,sans-serif;
         }
+        a{
+            margin: 0 auto;
+            text-decoration: none;
+            color: black;
+        }
+        .item-number{
+
+            position: absolute;
+            background-color: $secondary-color;
+            color: white;
+            font-size: 17px;
+            border-radius: 50%;
+            width: 10px;
+            padding: 0 5px 0 6px;
+            top: 12px;
+            left: 20px;
+            @media screen and (min-width : 1025px){
+                top: 10px;
+                left: 41%;
+            }
+
+        }
     }
     :hover{
         background-color: $primary-color;
     }
+
 }
+
 h1{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -72,4 +97,3 @@ footer{
         }
     }
 }
-

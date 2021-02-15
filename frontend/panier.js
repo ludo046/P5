@@ -13,10 +13,11 @@ function displayBasket(){
             list.classList.add('list-basket')
             const productImage = document.createElement('img')
             productImage.src = items.image
-            productImage.classList.add('img-article')
+            productImage.classList.add('img-basket')
             const info = document.createElement('div')
-            info.classList.add('info')
+            info.classList.add('info-basket')
             let productName = document.createElement('h2')
+            productName.classList.add('product-name')
             productName.innerText = items.name
             let price = document.createElement('p')
             price.innerText = items.price/100+'.00 €'
@@ -46,7 +47,10 @@ function displayBasket(){
         })
     } else {    // ci il n'y a pas d'article affiche le message 'panier vide'
         const infoAnyProduct = document.createElement('li')
+        infoAnyProduct.classList.add('list-basket')
         const anyProduct = document.createElement('h2')
+        anyProduct.classList.add('any-item')
+        anyProduct.style.margin = '10px auto'
         anyProduct.innerText = 'Votre panier est vide';
 
         const form = document.querySelector('.form')
@@ -89,6 +93,7 @@ const address = document.getElementById('address')
 const city = document.getElementById('city')
 
 
+
 cmdBtn.addEventListener('click',(e) => {
     e.preventDefault()
     let contact = {
@@ -121,7 +126,7 @@ cmdBtn.addEventListener('click',(e) => {
     }).then ((r) => {
     const orderId = r.orderId;
     if (orderId == undefined) {
-        alert('ta fait une connerie')
+        alert('veuillez remplir tous les champs')
     } else {
         window.location.href = `confirmation.html?commandId=${orderId}`
         localStorage.removeItem('teddie')
@@ -132,4 +137,7 @@ cmdBtn.addEventListener('click',(e) => {
     })
 })
 
+itemNumber = JSON.parse(localStorage.getItem('teddie'))
+numberItem = document.querySelector('.item-number')
+numberItem.innerHTML = itemNumber.length
 

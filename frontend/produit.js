@@ -80,12 +80,20 @@ addCard.addEventListener('click', async function () {
         let card = []
         card.push(completeTeddies)
         localStorage.setItem('teddie',JSON.stringify(card))
+        window.location.href = `index.html`
     } else if (!card.some(teddie => teddie == teddie.id === completeTeddies.id)){    //si panier verifier que je n'ai pas le meme produit a l'interieur avant d'ajouter le nouveau 
         card.push(completeTeddies)
         localStorage.setItem('teddie',JSON.stringify(card))
+        window.location.href = `index.html`
     } else {      //ci je l'ai deja je l'enleve pour le remplacer 
         const newCard = card.filter(teddie => teddie == teddie.id !== completeTeddies.id)
         newCard.push(completeTeddies)
         localStorage.setItem('teddie', JSON.stringify(newCard))
+        window.location.href = `index.html`
     }
 });
+
+
+itemNumber = JSON.parse(localStorage.getItem('teddie'))
+numberItem = document.querySelector('.item-number')
+numberItem.innerHTML = itemNumber.length
