@@ -38,29 +38,29 @@
             </section>
             <section class="form">
                 <h3>Expédition</h3>
-                <form>
+                <form id="form">
                     <div class="input">
                         <div>
                             <div class="anim">
                                 <label for="name">Nom <span class="guide">----------</span></label>
-                                <input type="text" id="name" class="exp" placeholder="ex : Dupont" pattern="[a-zA-ZÀ-ÿ]" required >
+                                <input type="text" name="name" pattern="^[a-zA-Z]+$"  id="name" class="exp" placeholder="ex : Dupont"  required >
                             </div>
                             <div class="anim">
                                 <label for="first-name">Prénom <span class="guide">-----</span></label>
-                                <input type="text" id="first-name" class="exp" placeholder="ex : Margueritte" pattern="[a-zA-ZÀ-ÿ]" required >  
+                                <input type="text" id="first-name" class="exp" placeholder="ex : Margueritte" pattern="^[^ ][a-zA-Z '\-éèêëçäà]*[^ ]$" required >  
                             </div>                                               
                         </div>
                         <div class="anim">
                             <label for="mail">Email <span class="guide">---------</span></label>
-                            <input type="email" id="mail" class="exp" placeholder="ex : dupond.m@gmail.com" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" required >
+                            <input type="email" id="mail" class="exp" placeholder="ex : dupond.m@gmail.com" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required >
                         </div>
                         <div class="anim">
                             <label for="address">Adresse <span class="guide">-----</span></label>
-                            <input type="text" id="address" class="exp" placeholder="ex : 8 place du four" pattern="[^A-Za-z0-9 ]+" required >
+                            <input type="text" id="address" class="exp" placeholder="ex : 8 place du four"  required >
                         </div>
                         <div class="anim">
                             <label for="ville">Ville <span class="guide">------------</span></label>
-                            <input type="text" id="city" class="exp" placeholder="ex : caveirac" required>
+                            <input type="text" id="city" class="exp" placeholder="ex : caveirac" pattern="^[a-zA-Z]+$" required>
                         </div>
                     </div>
                     <div class="ordered">

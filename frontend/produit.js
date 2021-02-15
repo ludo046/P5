@@ -7,7 +7,8 @@ function getOneTeddie() {    //fonction pour afficher le produit selectionner
 
     return fetch(`http://localhost:3000/api/teddies/${id}`)
         .then((response) => response.json())
-        .then(oneTeddie => oneTeddie);
+        .then(oneTeddie => oneTeddie)
+        .catch((error) => {alert(error)})
 }
 
 

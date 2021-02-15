@@ -72,7 +72,7 @@ function deleteProduct(id){
     document.location.href = 'panier.html'
 }
 
-function price(){   // fonction de calcul du prix total
+function getprice(){   // fonction de calcul du prix total
     let totalPrice = 0 
     JSON.parse(localStorage.getItem('teddie')).forEach((items)=>{   //boucle pour calculer le prix total en foction du nombre d'article et de la quantité de chacun 
         totalPrice += items.price*items.quantity/100
@@ -83,7 +83,7 @@ function price(){   // fonction de calcul du prix total
 
     total.appendChild(orderPrice)
 }
-price()
+getprice()
 
 // ============================ FORMULAIRE =================================
 const lastName = document.getElementById('name')
@@ -92,50 +92,55 @@ const mail = document.getElementById('mail')
 const address = document.getElementById('address')
 const city = document.getElementById('city')
 
+const form = document.getElementById('form')
 
-
-cmdBtn.addEventListener('click',(e) => {
+form.addEventListener('submit',(e) => {
     e.preventDefault()
-    let contact = {
-        lastName : lastName.value,
-        firstName : firstName.value,
-        email : mail.value,
-        address : address.value,
-        city : city.value
-    }
-    let products = [];
 
-        teddie.forEach(p => {
-            products.push(p.id)
-        })
+
+        let contact = {
+            lastName : lastName.value,
+            firstName : firstName.value,
+            email : mail.value,
+            address : address.value,
+            city : city.value
+        }
+        let products = [];
     
-    let commandeContact = JSON.stringify({
-        contact, products
+            teddie.forEach(p => {
+                products.push(p.id)
+            })
         
-    })
-    console.log(commandeContact);
-    fetch('http://localhost:3000/api/teddies/order',{
-        method: 'POST',
-        body: commandeContact,
-        headers:{
-            'Content-Type':'application/json',
-        },
-        
-    }).then(response => {
-        return response.json()
-    }).then ((r) => {
-    const orderId = r.orderId;
-    if (orderId == undefined) {
-        alert('veuillez remplir tous les champs')
-    } else {
-        window.location.href = `confirmation.html?commandId=${orderId}`
-        localStorage.removeItem('teddie')
+        let commandeContact = JSON.stringify({
+            contact, products
+    
+        })
+        console.log(commandeContact);
+        fetch('http://localhost:3000/api/teddies/order',{
+            method: 'POST',
+            body: commandeContact,
+            headers:{
+                'Content-Type':'application/json',
+            },
+            
+        }).then(response => {
+            return response.json()
+        }).then ((r) => {
+        const orderId = r.orderId;
+        if (orderId == undefined) {
+            alert('veuillez remplir tous les champs')
+        } else {
+            window.location.href = `confirmation.html?commandId=${orderId}`
+            localStorage.removeItem('teddie')
+        }
+        })
+        .catch((error) => {
+            alert(error)
+        })
     }
-    })
-    .catch((error) => {
-        alert(error)
-    })
-})
+
+    
+)
 
 itemNumber = JSON.parse(localStorage.getItem('teddie'))
 numberItem = document.querySelector('.item-number')

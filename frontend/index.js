@@ -29,6 +29,9 @@ function getTeddies(){
            }
         }) 
     })
+    .catch((error) => {
+        alert(error)
+    })
 }
 getTeddies();
 
