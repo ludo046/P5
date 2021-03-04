@@ -31,12 +31,7 @@ function getOneTeddie() {    //fonction pour afficher le produit selectionner
     const select = document.getElementById('color');
     //boucle pour recuperer les options de chaque produit
     for (let i in oneTeddie.colors) {
-        if (i < 1) {
-            select.innerHTML += `<option value='${oneTeddie.colors[i]}' selected='selected'>${oneTeddie.colors[i]}</option>`;
-        } else {
             select.innerHTML += `<option value='${oneTeddie.colors[i]}'>${oneTeddie.colors[i]}</option>`;
-
-        }
     }
 })();
 

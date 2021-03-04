@@ -35,5 +35,6 @@ function getTeddies(){
 }
 getTeddies();
 
+itemNumber = JSON.parse(localStorage.getItem('teddie'))
 numberItem = document.querySelector('.item-number')
 numberItem.innerHTML = itemNumber.length

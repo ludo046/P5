@@ -1,6 +1,6 @@
 let teddie = JSON.parse(localStorage.getItem('teddie'))
-let sex = document.querySelectorAll(".genre")
 const cmdBtn = document.querySelector('.btn')
+let totalPrice;
 
 function displayBasket(){
     basketProduct = JSON.parse(localStorage.getItem('teddie'))
@@ -73,7 +73,7 @@ function deleteProduct(id){
 }
 
 function getprice(){   // fonction de calcul du prix total
-    let totalPrice = 0 
+    totalPrice = 0 
     JSON.parse(localStorage.getItem('teddie')).forEach((items)=>{   //boucle pour calculer le prix total en foction du nombre d'article et de la quantité de chacun 
         totalPrice += items.price*items.quantity/100
     })
@@ -130,7 +130,7 @@ form.addEventListener('submit',(e) => {
         if (orderId == undefined) {
             alert('veuillez remplir tous les champs')
         } else {
-            window.location.href = `confirmation.html?commandId=${orderId}`
+            window.location.href = `confirmation.html?commandId=${orderId}%price=${totalPrice}`
             localStorage.removeItem('teddie')
         }
         })
